@@ -3,16 +3,22 @@ import time
 
 tello = Tello()
 
-tello.connect()
+try:
+    tello.connect()
 
-print("Battery:", tello.get_battery())
+    print("Battery:", tello.get_battery())
 
-tello.takeoff()
+    tello.takeoff()
 
-time.sleep(2)
+    time.sleep(2)
 
-tello.move_forward(50)
+    tello.move_forward(50)
 
-time.sleep(2)
+    time.sleep(2)
 
-tello.land()
+    tello.land()
+except BaseException as e:
+    print(f"{e}")
+    print("\x1b[31;1mCan't connect. Are you connected to the drone's network?\x1b[0m")
+
+
