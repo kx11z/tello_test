@@ -17,4 +17,3 @@ def get_drone():
         return tello
     except BaseException as e:
         print(f"\n\n============= FLIGHT FAILED =============\n\x1b[31mError:\x1b[1m {e}\x1b[0m\nIf this is a connection issue, make sure you are \x1b[1mconnected to the drone wifi\x1b[0m, your \x1b[1mVPN\x1b[0m and \x1b[1mfirewall\x1b[0m are off, and there are no other processes running on the port. (use `ss -tulpn` to diagnose, need ports 8889, 8890, 11111) \x1b[0m")
-        raise e

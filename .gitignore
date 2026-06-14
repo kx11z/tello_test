@@ -2,3 +2,6 @@ __pycache__
 .venv
 venv
 picture.png
+tello_sim
+/tello_sim
+**/*/tello_sim
